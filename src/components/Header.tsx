@@ -24,8 +24,9 @@ export default function Header({
   ];
 
   return (
-    <header className="bg-white border-b border-gray-200 px-4 py-3 md:px-6 md:py-4">
+    <header className="bg-white border-b border-gray-200 px-4 py-2 md:px-6 md:py-4">
       <div className="flex items-center justify-between max-w-7xl mx-auto">
+        {/* Left mobile cluster: chat, search, messages count (compact) */}
         <nav className="flex space-x-1 md:space-x-8">
           {tabs.map((tab) => {
             const Icon = tab.icon;
@@ -41,10 +42,10 @@ export default function Header({
                     : 'text-gray-600 hover:text-purple-600 hover:bg-gray-50'
                 }`}
               >
-                <Icon className="h-4 w-4 md:h-5 md:w-5" />
+                <Icon className="h-5 w-5 md:h-5 md:w-5" />
                 <span className="hidden sm:inline">{tab.label}</span>
                 {tab.badge && tab.badge > 0 && (
-                  <span className="absolute -top-1 -right-1 md:-top-2 md:-right-2 bg-red-500 text-white text-xs rounded-full h-4 w-4 md:h-5 md:w-5 flex items-center justify-center">
+                  <span className="absolute -top-1 -right-1 md:-top-2 md:-right-2 bg-red-500 text-white text-[10px] rounded-full h-4 w-4 md:h-5 md:w-5 flex items-center justify-center">
                     {tab.badge}
                   </span>
                 )}
@@ -59,7 +60,7 @@ export default function Header({
         <div className="flex items-center space-x-2 md:space-x-4">
           <button
             onClick={onPremiumClick}
-            className="flex items-center space-x-1 md:space-x-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-3 md:px-4 py-2 rounded-lg font-medium hover:from-green-600 hover:to-emerald-700 transition-all duration-200 shadow-lg hover:shadow-xl text-sm md:text-base"
+            className="flex items-center space-x-1 md:space-x-2 bg-black text-yellow-300 px-3 md:px-4 py-2 rounded-xl font-semibold hover:bg-gray-900 transition-all duration-200 text-sm md:text-base"
           >
             <Crown className="h-4 w-4" />
             <span className="hidden sm:inline">Premium</span>
