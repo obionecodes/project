@@ -6,6 +6,8 @@ import ExploreSection from './components/ExploreSection';
 import MessagesSection from './components/MessagesSection';
 import UserProfileSection from './components/UserProfileSection';
 import PremiumModal from './components/PremiumModal';
+import MobileRewardsCard from './components/MobileRewardsCard';
+import MobileCallHistory from './components/MobileCallHistory';
 import { TabType, ExploreTab, MessageFilter, ProfileFilter } from './types';
 import { mockUsers, mockMessages, coinRewards, currentUser } from './data/mockData';
 
