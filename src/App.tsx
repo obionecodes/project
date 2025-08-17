@@ -10,6 +10,7 @@ import MobileRewardsCard from './components/MobileRewardsCard';
 import MobileCallHistory from './components/MobileCallHistory';
 import { TabType, ExploreTab, MessageFilter, ProfileFilter } from './types';
 import { mockUsers, mockMessages, coinRewards, currentUser } from './data/mockData';
+import { Video } from 'lucide-react';
 
 function App() {
   const [activeTab, setActiveTab] = useState<TabType>('video-chat');
@@ -90,8 +91,16 @@ function App() {
 
             {/* Mobile action buttons */}
             <div className="lg:hidden grid grid-cols-2 gap-3">
-              <button className="h-12 rounded-xl border border-gray-200 bg-white text-gray-900 font-medium">View stories</button>
-              <button className="h-12 rounded-xl bg-pink-500 text-white font-semibold">Start random</button>
+              <button className="flex items-center justify-center gap-2 h-12 rounded-xl border border-gray-200 bg-white text-gray-900 font-medium text-sm">
+                <svg className="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                View stories
+              </button>
+              <button className="flex items-center justify-center gap-2 h-12 rounded-xl bg-pink-500 text-white font-semibold text-sm hover:bg-pink-600 transition-colors">
+                <Video className="w-5 h-5" />
+                Start random
+              </button>
             </div>
 
             {/* Mobile call history strip */}
