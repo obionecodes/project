@@ -30,7 +30,7 @@ export default function MobileCallHistory({ users }: MobileCallHistoryProps) {
               }`}>{u.status === 'Available' ? 'Online' : u.status}</span>
             </div>
             <button
-              className="absolute bottom-2 right-2 p-3 rounded-full bg-white text-purple-600 shadow-md"
+              className="absolute bottom-2 right-2 p-3 rounded-full bg-white text-purple-600 shadow-md disabled:bg-gray-200 disabled:text-gray-400"
               aria-label="Start call"
               disabled={u.status !== 'Available'}
             >

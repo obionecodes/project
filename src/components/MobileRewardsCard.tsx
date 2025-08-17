@@ -12,7 +12,7 @@ export default function MobileRewardsCard({ rewards, onClaimNext }: MobileReward
 
   return (
     <div className="lg:hidden bg-white rounded-2xl p-4 shadow-sm">
-      <p className="text-center text-gray-800 font-medium mb-3">
+      <p className="text-center text-gray-900 font-semibold mb-3">
         Come every day and grab FREE coins
       </p>
 
@@ -38,16 +38,16 @@ export default function MobileRewardsCard({ rewards, onClaimNext }: MobileReward
         })}
       </div>
 
-      <div className="mt-3 grid grid-cols-2 gap-3">
+      <div className="mt-4 grid grid-cols-2 gap-3">
         <button
-          className="flex items-center justify-center gap-2 h-11 rounded-xl border border-gray-200 text-gray-900 font-medium"
+          className="flex items-center justify-center gap-2 h-12 rounded-xl border border-gray-200 text-gray-900 font-medium"
           type="button"
         >
           <Gift className="h-5 w-5 text-purple-600" />
           More rewards
         </button>
         <button
-          className="h-11 rounded-xl bg-emerald-600 text-white font-semibold disabled:opacity-60 disabled:cursor-not-allowed"
+          className="h-12 rounded-xl bg-emerald-600 text-white font-semibold disabled:opacity-60 disabled:cursor-not-allowed"
           type="button"
           onClick={() => nextUnclaimed && onClaimNext(nextUnclaimed.day)}
           disabled={!nextUnclaimed}

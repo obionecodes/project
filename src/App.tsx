@@ -65,6 +65,9 @@ function App() {
       case 'video-chat':
         return (
           <div className="space-y-6">
+            {/* Mobile hero rewards to match provided design */}
+            <MobileRewardsCard rewards={rewards} onClaimNext={handleClaimReward} />
+
             <div className="flex items-center justify-between">
               <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">Private calls with top girls</h2>
               <button className="text-purple-600 font-medium hover:text-purple-700 transition-colors text-sm sm:text-base">
@@ -82,6 +85,15 @@ function App() {
                 />
               ))}
             </div>
+
+            {/* Mobile action buttons */}
+            <div className="lg:hidden grid grid-cols-2 gap-3">
+              <button className="h-12 rounded-xl border border-gray-200 bg-white text-gray-900 font-medium">View stories</button>
+              <button className="h-12 rounded-xl bg-pink-500 text-white font-semibold">Start random</button>
+            </div>
+
+            {/* Mobile call history strip */}
+            <MobileCallHistory users={mockUsers} />
           </div>
         );
       

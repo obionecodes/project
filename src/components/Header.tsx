@@ -56,7 +56,11 @@ export default function Header({
             );
           })}
         </nav>
-        
+        {/* Center brand on mobile */}
+        <div className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0">
+          <span className="text-xl font-extrabold text-purple-600 tracking-tight md:hidden">mili.live</span>
+        </div>
+
         <div className="flex items-center space-x-2 md:space-x-4">
           <button
             onClick={onPremiumClick}
